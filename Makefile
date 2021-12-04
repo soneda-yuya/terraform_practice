@@ -17,3 +17,7 @@ plan:
 .PHONY: fmt
 fmt:
 	docker compose exec sample_terraform terraform fmt
+
+.PHONY: console
+console:
+	docker compose exec sample_terraform terraform console
