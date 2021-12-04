@@ -1,22 +1,14 @@
-variable "platform_credential" {
-  type = string
-}
-
-variable "platform_principal" {
-  type = string
-}
-
 variable "main_variables" {
   type = map(any)
 
   default = {
-    oem_dev = {
-      name = "hoge1"
+    sample_prod = {
+      name = "sample_prod"
       sns = {
-        platform = "APNS_VOIP_SANDBOX"
+        platform = "APNS_SANDBOX"
       }
       tags = {
-        env = "hoge1"
+        env = "sample_prod"
       }
     }
   }

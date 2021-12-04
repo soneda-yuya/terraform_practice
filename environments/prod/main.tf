@@ -1,6 +1,17 @@
-module "dev" {
-  source = "../.."
-  main_variables=var.main_variables
-  platform_credential=var.platform_credential
-  platform_principal=var.platform_principal
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "3.68.0"
+    }
+  }
+}
+
+module "fukuda" {
+  source                = "../.."
+  main_variables        = var.main_variables
+  platform_credential   = file("./credentials/platform_credential.txt")
+  platform_principal    = file("./credentials/platform_principal.txt")
+  state_bucket_name     = "terraform-state-sample-prod"
+  state_lock_table_name = "terraform_state_lock_table_sample_prod"
 }
