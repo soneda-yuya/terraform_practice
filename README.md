@@ -62,3 +62,7 @@ $ make apply ENV={実行したい環境(ex: soneda)}
 ```destroy
 $ make destroy ENV={実行したい環境(ex: soneda)} 
 ```
+
+# 参考にしている記事
+
+https://blog.serverworks.co.jp/where_my_terraform_bestpractice
